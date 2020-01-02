@@ -23,11 +23,14 @@ public class ALU {
 		}
 		// 下面对绝对值进行处理
 		int n = Integer.valueOf(tmpNum);
+		int i = 1;
+		
 		while (n >= 1) {
-			result.insert(0, String.valueOf(n % 2));
-			n = (n - n * 2) / 2;
+			result.insert(0, Integer.valueOf(n % 2));
+			n = (n-Integer.valueOf(n % 2)) / 2;
+			//i ++;
 		}
-		// 若是负数,取反加一
+		// 若是负数,取反加一 
 		if (isMinus) {
 			result = new StringBuilder(oneAdder(negation(result.toString())).substring(1, result.length() + 1));
 		}
