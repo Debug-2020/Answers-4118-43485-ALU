@@ -23,8 +23,6 @@ public class ALU {
 		}
 		// 下面对绝对值进行处理
 		int n = Integer.valueOf(tmpNum);
-		int i = 1;
-		
 		while (n >= 1) {
 			result.insert(0, Integer.valueOf(n % 2));
 			n = (n-Integer.valueOf(n % 2)) / 2;
